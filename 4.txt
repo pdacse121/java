@@ -1,0 +1,47 @@
+package javalab;
+import java.io.IOException;
+import java.util.Scanner;
+public class Acc
+{
+int accno,balance;
+Acc(int x,int y)
+{
+accno=x;
+balance=y;
+}
+void Transfer_money(int x,Acc.ob)
+{
+balance=x+balance;
+ob.balance-=x;
+}
+void display()
+{
+System.out.println(accno + "\t" + balance);
+}
+public class Prgm4 {
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+throws IOException
+{
+Acc Acc1=new Acc(10,7000);
+Acc Acc2=new Acc(20,5000);
+Acc Acc3=new Acc(30,3000);
+Scanner in=new Scanner(System.in);
+int a;
+System.out.println("enter the amount to transfer");
+a=in.nextInt();
+System.out.println("acc details before transmission of money");
+System.out.println("accno\t balance");
+Acc1.display();
+Acc2.display();
+Acc3.display();
+Acc1.transfer_money(a,Acc3);
+System.out.println("acc details after transmission of money");
+System.out.println("accno\t balance");
+Acc1.display();
+Acc2.display();
+Acc3.display();
+}
+}
+}
+}

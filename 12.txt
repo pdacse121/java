@@ -1,0 +1,39 @@
+package pack1;
+public class Rect
+{
+int len,br;
+public Rect(int a,int b)
+{
+len=a;
+br=b;
+}
+public void Rarea()
+{
+System.out.println("area of rectangle="+(len*br));
+}
+}
+package pack2;
+public class Sq
+{
+int side;
+public Sq(int a)
+{
+side=a;
+}
+public void carea()
+{
+System.out.println("area of rectangle="+(side*side));
+}
+}
+package clasprgm;
+import pack1.Rect;
+import pack2.Sq;
+class Packtest{
+public static void main(String [] args)
+{
+Rect r=new Rect(4,5);
+Sq s=new Sq (2);
+R.Rarea();
+S.Carea();
+}
+}

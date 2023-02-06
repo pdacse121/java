@@ -1,0 +1,60 @@
+Package labprgm;
+Class A extends Thread
+{
+Public void run()
+{
+For(int i=0;i<=5;i++)
+{
+If(i==1)
+System.out.println(“from thread A:i=” +i);
+}
+System.out.println(“exit from A”);
+}
+}
+Class B extends Thread
+{
+Public void run()
+{
+For(int j=0;j<=5;j++)
+{
+If(j==1)
+System.out.println(“from thread B:j=” +j);
+}
+System.out.println(“exit from B”);
+}
+}
+Class C extends Thread
+{
+Public void run()
+{
+For(int k=0;k<=5;k++)
+{
+If(i==1)
+System.out.println(“from thread C:k=” +k);
+If(k==1)
+Try
+{
+Sleep(1000);
+}
+Catch(Exception e)
+{
+}
+}
+System.out.println(“exit from C”);
+}
+}
+Class Thread_test
+{
+Public static void main(String [] args)
+{
+A A1=new A();
+B B1=new B();
+C C1=new C();
+System.out.println(“start thread test A”);
+A1.start();
+System.out.println(“start thread test B”);
+B1.start();
+System.out.println(“start thread test C”);
+C1.start();
+System.out.println(“end of main”);
+}}

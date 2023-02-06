@@ -1,0 +1,18 @@
+package javalab;
+public class Fib {
+public static void main(String[] args) {
+int fib1=0;
+int fib2=1;
+System.out.println(fib1);
+System.out.println(fib2);
+do
+{
+int temp;
+temp=fib1+fib2;
+System.out.println(temp);
+fib1=fib2;
+fib2=temp;
+}
+while(fib2<21);
+}
+}

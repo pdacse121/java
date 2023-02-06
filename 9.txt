@@ -1,0 +1,66 @@
+package labprgm;
+class first extends Thread
+{
+public void run()
+{
+try
+{
+While(true)
+{
+Thread.sleep(1000);
+System.out.println(“good morning”);
+}
+}
+Catch(InterruptedException ie)
+{
+System.out.println(“err”);
+}
+}
+}
+class second extends Thread
+{
+public void run()
+{
+try
+{
+While(true)
+{
+Thred.sleep(2000);
+System.out.println(“hello”);
+}
+}
+Catch(InterruptedException ie)
+{
+System.out.println(“err”);
+}
+}
+}
+class third extends Thread
+{
+public void run()
+{
+try
+{
+While(true)
+{
+Thread.sleep(3000);
+System.out.println(“welcome”);
+}
+}
+Catch(InterruptedException ie)
+{
+System.out.println(“err”);
+}
+}
+}
+public class Prgm11
+{
+public static void main(String [] args) {
+first ob1=new first();
+second ob2=new second();
+third ob=new third();
+Ob1.start();
+Ob2.start();
+Ob3.start();
+}
+}

@@ -1,0 +1,30 @@
+Package labprgm;
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+public class Eg_event extends Applet implements keyListener
+{
+private static final long serialVersionUID=1L;
+public void init()
+{
+addkeyListener(this);
+}
+public void keyTyped(KeyEvent kb)
+{
+}
+public void keyReleased(KeyEvent kb)
+{
+showStatus(“key on the keyboard is released”);
+}
+public void keyPressed(KeyEvent kb)
+{
+showStatus(“key on the keyboard is pressed”);
+}
+Font f1=new Font(“ courier new”,Font.BOLD,20);
+public void paint(Graphics GA)
+{
+GA.setFont(f1);
+GA.setColor(color.blue);
+GA.drawString(“this applet sense the updown motion of the key”,20,120);
+}
+}

@@ -1,0 +1,58 @@
+package labprgm;
+import java.applet.*;
+import java.awt.*;
+public class Prgm7 extends Applet{
+private static final long SerialVersionUID=1L;
+String msg="";
+int mXcord=0;
+int mYcord=0;
+public boolean mouseDown(Event e,int x,int y)
+{
+mXcord=x;
+mYcord=y;
+msg="button pressed";
+repaint();
+return true;
+}
+public boolean mouseUp(Event e,int x,int y)
+{
+mXcord=x;
+mYcord=y;
+msg="button released";
+repaint();
+return true;
+}
+public boolean mouseDrag(Event e,int x,int y)
+{
+mXcord=x;
+mYcord=y;
+msg="*";
+showStatus(“dragging the mouse at position” +x+ “,” +y);
+repaint();
+return true;
+}
+public boolean mouseMove(e,int x,int y)
+{
+showStatus(“dragging the mouse at position” +x+ “,” +y);
+return true;
+}
+public boolean mouseEnter(Event e,int x,int y)
+{
+mXcord=x;
+mYcord=y;
+msg="mouse entered";
+repaint();
+return true;
+}
+public boolean mouseExit(Event e,int x,int y)
+{
+mXcord=x;
+mYcord=y;
+msg="mouse left";
+repaint();
+return true;
+}
+public void paint(Graphics g) {
+g.drawString(msg, mXcord, mYcord);
+}
+}

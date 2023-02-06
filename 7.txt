@@ -1,0 +1,39 @@
+package labprgm;
+import java.applet.Applet;
+import java.awt.Button;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class Prgm8 extends Applet implements ActionListener {
+private static final long serialVersionUID=1L;
+Label L1,L2;
+TextField T1,T2;
+Button B1;
+public void init()
+{
+L1=new Label("enter number");
+L2=new Label("factorial");
+T1=new TextField(5);
+B1=new Button("compute");
+T2=new TextField(5);
+B1.addActionListener(this);
+add(L1);
+add(T1);
+add(L2);
+T2.setEditable(false);
+add(T2);
+add(B1);
+}
+public void actionPerformed(ActionEvent ae)
+{
+if(ae.getSource()==B1)
+{
+int n=Integer.parseInt(T1.getText());
+int f=1,i;
+for(i=1;i<=n;i++)
+f=f*i;
+T2.setText(String.valueOf(f));
+}
+}
+}
